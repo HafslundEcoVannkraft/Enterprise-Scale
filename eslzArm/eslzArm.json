@@ -16,7 +16,7 @@
             "maxLength": 36,
             "metadata": {
                 "description": "Provide the subscription id of an existing, empty subscription you want to dedicate for single platform.",
-                "designArea": "Azure billing offers and Microsoft Entra ID tenants"
+                "designArea": "Azure billing and Microsoft Entra tenant"
             }
         },
         "enablePrivateSubnet": {
@@ -28,8 +28,8 @@
                 "Disabled"
             ],
             "metadata": {
-                "description": "",
-                "designArea": ""
+                "description": "Ensure your subnets are secure by default by preventing default outbound access. For more information go to https://aka.ms/defaultoutboundaccessretirement. Uses policy https://www.azadvertizer.net/azpolicyadvertizer/7bca8353-aa3b-429b-904a-9229c4385837.html.",
+                "designArea": "Network topology and connectivity"
             }
         },
         "telemetryOptOut": {
@@ -53,7 +53,7 @@
             ],
             "metadata": {
                 "description": "If 'Yes' is selected Log Analytics will be deployed to your environment for collecting of logs from resources deployed within your Azure environemnt and is recommended by default. If 'No', it will be ignored.",
-                "designArea": "Governance"
+                "designArea": "Management"
             }
         },
         "laCategory": {
@@ -65,7 +65,7 @@
             ],
             "metadata": {
                 "description": "The selection will determine the category of diagnostic settings logs that will be forwarded to Log Analytics. NOTE: All logs is recommended for full visibility. Audit log category is limited to Azure services that support this category.",
-                "designArea": "Governance"
+                "designArea": "Management"
             }
         },
         "retentionInDays": {
@@ -73,7 +73,7 @@
             "defaultValue": "30",
             "metadata": {
                 "description": "Specify the retention period in days for the Log Analytics workspace. Default is 30 days (free retention period). If you are also deploying Microsoft Sentinel, change this to 90 days (free retention for Sentinel).",
-                "designArea": "Governance"
+                "designArea": "Management"
             }
         },
         "enableSentinel": {
@@ -85,7 +85,7 @@
             ],
             "metadata": {
                 "description": "If 'Yes' is selected Sentinel will be enabled on the Log Analytics workspace. Note additional configuration is required to complete Sentinel onboarding. If 'No', it will not be enabled.",
-                "designArea": "Governance"
+                "designArea": "Security"
             }
         },
         "managementSubscriptionId": {
@@ -94,7 +94,7 @@
             "maxLength": 36,
             "metadata": {
                 "description": "Provide the subscription id of an existing, empty subscription you want to dedicate for management. If you don't want to bring a subscription, leave this parameter empty as is.",
-                "designArea": "Azure billing offers and Microsoft Entra ID tenants"
+                "designArea": "Azure billing and Microsoft Entra tenant"
             }
         },
         "enableChangeTracking": {
@@ -106,7 +106,7 @@
             ],
             "metadata": {
                 "description": "Change Tracking and Inventory allows monitoring of changes to Windows registry keys.",
-                "designArea": "Governance"
+                "designArea": "Management"
             }
         },
         "enableUpdateMgmt": {
@@ -118,7 +118,7 @@
             "defaultValue": "Yes",
             "metadata": {
                 "description": "Azure Update Manager is a unified service to help manage and govern updates for all your machines.",
-                "designArea": "Governance"
+                "designArea": "Management"
             }
         },
         "enableVmInsights": {
@@ -130,7 +130,7 @@
             "defaultValue": "Yes",
             "metadata": {
                 "description": "VM insights provides a set of predefined workbooks that allow you to view trending of collected performance data over time",
-                "designArea": "Governance"
+                "designArea": "Management"
             }
         },
         "enableAsc": {
@@ -142,7 +142,7 @@
             ],
             "metadata": {
                 "description": "Selecting 'Yes' will enable the options to configure individual Microsoft Defender for Cloud components, and will enable Microsoft Defender for Cloud plans on all subscriptions in the Azure Landing Zone",
-                "designArea": "Security"            
+                "designArea": "Security"
             }
         },
         "emailContactAsc": {
@@ -150,7 +150,7 @@
             "defaultValue": "",
             "metadata": {
                 "description": "Email address for Microsoft Defender for Cloud contact details.",
-                "designArea": "Security"    
+                "designArea": "Security"
             }
         },
         "enableAscForServers": {
@@ -162,7 +162,7 @@
             ],
             "metadata": {
                 "description": "If 'Yes' is selected, Microsoft Defender for Cloud will be enabled for all servers",
-                "designArea": "Security"    
+                "designArea": "Security"
             }
         },
         "enableAscForServersVulnerabilityAssessments": {
@@ -174,7 +174,7 @@
             ],
             "metadata": {
                 "description": "If 'Yes' is selected, Microsoft Defender for Cloud for servers vulnerability assessments will be enabled for all servers.",
-                "designArea": "Security"    
+                "designArea": "Security"
             }
         },
         "enableAscForOssDb": {
@@ -186,7 +186,7 @@
             "defaultValue": "Disabled",
             "metadata": {
                 "description": "If 'Yes' is selected, Microsoft Defender for Cloud will be enabled for open-source relational databases.",
-                "designArea": "Security"    
+                "designArea": "Security"
             }
         },
         "enableAscForCosmosDbs": {
@@ -198,7 +198,7 @@
             "defaultValue": "Disabled",
             "metadata": {
                 "description": "If 'Yes' is selected, Microsoft Defender for Cloud will be enabled for Cosmos DB",
-                "designArea": "Security"    
+                "designArea": "Security"
             }
         },
         "enableAscForAppServices": {
@@ -210,7 +210,7 @@
             "defaultValue": "Disabled",
             "metadata": {
                 "description": "If 'Yes' is selected, Microsoft Defender for Cloud will be enabled for AppServices",
-                "designArea": "Security"    
+                "designArea": "Security"
             }
         },
         "enableAscForStorage": {
@@ -222,7 +222,7 @@
             "defaultValue": "Disabled",
             "metadata": {
                 "description": "If 'Yes' is selected, Microsoft Defender for Cloud will be enabled for Storage",
-                "designArea": "Security"    
+                "designArea": "Security"
             }
         },
         "enableAscForSql": {
@@ -234,7 +234,7 @@
             "defaultValue": "Disabled",
             "metadata": {
                 "description": "If 'Yes' is selected, Microsoft Defender for Cloud will be enabled for Azure SQL Database",
-                "designArea": "Security"    
+                "designArea": "Security"
             }
         },
         "enableAscForSqlOnVm": {
@@ -246,7 +246,7 @@
             "defaultValue": "Disabled",
             "metadata": {
                 "description": "If 'Yes' is selected, Microsoft Defender for Cloud will be enabled for SQL servers on virtual machines",
-                "designArea": "Security"    
+                "designArea": "Security"
             }
         },
         "enableAscForKeyVault": {
@@ -258,7 +258,7 @@
             "defaultValue": "Disabled",
             "metadata": {
                 "description": "If 'Yes' is selected, Microsoft Defender for Cloud will be enabled for Key Vault",
-                "designArea": "Security"    
+                "designArea": "Security"
             }
         },
         "enableAscForArm": {
@@ -270,7 +270,7 @@
             "defaultValue": "Disabled",
             "metadata": {
                 "description": "If 'Yes' is selected, Microsoft Defender for Cloud will be enabled for Resource Manager",
-                "designArea": "Security"    
+                "designArea": "Security"
             }
         },
         "enableAscForApis": {
@@ -282,7 +282,7 @@
             "defaultValue": "Disabled",
             "metadata": {
                 "description": "If 'Yes' is selected, Microsoft Defender for Cloud will be enabled for APIs",
-                "designArea": "Security"    
+                "designArea": "Security"
             }
         },
         "enableAscForCspm": {
@@ -294,7 +294,7 @@
             "defaultValue": "Disabled",
             "metadata": {
                 "description": "If 'Yes' is selected, Microsoft Defender CSPM will be enabled",
-                "designArea": "Security"    
+                "designArea": "Security"
             }
         },
         "enableAscForContainers": {
@@ -306,7 +306,7 @@
             "defaultValue": "Disabled",
             "metadata": {
                 "description": "If 'Yes' is selected, Microsoft Defender for Cloud will be enabled for Containers (Kubernetes and Container Registries)",
-                "designArea": "Security"    
+                "designArea": "Security"
             }
         },
         "enableMDEndpoints": {
@@ -319,7 +319,7 @@
             "defaultValue": "Disabled",
             "metadata": {
                 "description": "If 'Yes' is selected, Microsoft Defender for Endpoints will be deployed to supported virtual machines. You may want to disable this if you are using a third-party endpoint protection solution",
-                "designArea": "Security"    
+                "designArea": "Security"
             }
         },
         "enableSecuritySolution": {
@@ -339,7 +339,7 @@
             ],
             "metadata": {
                 "description": "If 'Yes' is selected the Deploy Azure Monitor Baseline Alerts for Service Health initiative is assigned to the Intermediate root management group. This will ensure that new subscriptions created within that scope are configured to monitor Service Health Events such as Service issues, Planned maintenance, Health advisories, Security advisories, and Resource health. If 'No', the initiative will not be assigned.",
-                "designArea": "Baseline alerts and monitoring",
+                "designArea": "Management",
                 "designRecommendation": "Enabling Azure Service Health alerts is highly recommended regardless of the size, type, or location of your organization. These alerts provide notifications about service issues, planned maintenance, and health advisories, which can help you: Receive updates about the health of your Azure services; Quickly respond to service disruptions or outages; Be informed about planned maintenance activities; Stay updated on security advisories."
             }
         },
@@ -353,7 +353,7 @@
             "maxLength": 36,
             "metadata": {
                 "description": "If 'Yes' is selected Azure Monitor Baseline Alerts can be enabled for the selected resources. Note that choosing 'Yes'  will import all Azure Monitor Baseline Alerts policy definitions into your environment. If 'No', Azure Monitor Baseline Alerts policy definitions will not be deployed.",
-                "designArea": "Baseline alerts and monitoring"
+                "designArea": "Management"
             }
         },
         "enableMonitorConnectivity": {
@@ -366,7 +366,7 @@
             "maxLength": 36,
             "metadata": {
                 "description": "If 'Yes' is selected the Deploy Azure Monitor Baseline Alerts for Connectivity policy initiative is assigned to the Connectivity management group. This will ensure that relevant new resources created within that scope are configured with appropriate baseline alerts. If 'No', the initiative will not be assigned.",
-                "designArea": "Baseline alerts and monitoring"
+                "designArea": "Management"
             }
         },
         "enableMonitorIdentity": {
@@ -379,7 +379,7 @@
             "maxLength": 36,
             "metadata": {
                 "description": "If 'Yes' is selected the Deploy Azure Monitor Baseline Alerts for Identity policy initiative is assigned to the Identity management group. This will ensure that relevant new resources created within that scope are configured with appropriate baseline alerts. If 'No', the initiative will not be assigned.",
-                "designArea": "Baseline alerts and monitoring"
+                "designArea": "Management"
             }
         },
         "enableMonitorManagement": {
@@ -392,7 +392,7 @@
             "maxLength": 36,
             "metadata": {
                 "description": "If 'Yes' is selected the Deploy Azure Monitor Baseline Alerts for Management policy initiative is assigned to the Management management group. This will ensure that relevant new resources created within that scope are configured with appropriate baseline alerts. If 'No', the initiative will not be assigned.",
-                "designArea": "Baseline alerts and monitoring"
+                "designArea": "Management"
             }
         },
         "monitorAlertsResourceGroup": {
@@ -401,7 +401,7 @@
             "maxLength": 90,
             "metadata": {
                 "description": "Resource group for activity log alerts and action groups for Azure Monitor Baseline Alerts. Will be created in all subscriptions in scope for the policy",
-                "designArea": "Baseline alerts and monitoring"
+                "designArea": "Management"
             }
         },
         "userAssignedManagedIdentityName": {
@@ -410,7 +410,7 @@
             "maxLength": 90,
             "metadata": {
                 "description": "Specify the name of the user assigned managed identity for monitoring purpose.",
-                "designArea": "Baseline alerts and monitoring"
+                "designArea": "Management"
             }
         },
         "ambaAgEmailContact": {
@@ -418,7 +418,7 @@
             "defaultValue": "",
             "metadata": {
                 "description": "Email address for action group notifications.",
-                "designArea": "Baseline alerts and monitoring"
+                "designArea": "Management"
             }
         },
         "ambaAgServiceHook": {
@@ -426,7 +426,7 @@
             "defaultValue": "",
             "metadata": {
                 "description": "Service Hook URI for action group notifications.",
-                "designArea": "Baseline alerts and monitoring"
+                "designArea": "Management"
             }
         },
         "ambaAgArmRole": {
@@ -434,7 +434,7 @@
             "defaultValue": [],
             "metadata": {
                 "description": "ARM roles for action group notifications.",
-                "designArea": "Baseline alerts and monitoring"
+                "designArea": "Management"
             }
         },
         "enableAMBAHybridVM": {
@@ -446,7 +446,7 @@
             ],
             "metadata": {
                 "description": "If 'Yes' is selected the Deploy Azure Monitor Baseline Alerts for Hybrid VMs policy initiative is assigned to the Landing Zones management group. This will ensure that relevant new resources created within that scope are configured with appropriate baseline alerts. If 'No', the initiative will not be assigned.",
-                "designArea": "Baseline alerts and monitoring"
+                "designArea": "Management"
             }
         },
         "enableAMBAKeyManagement": {
@@ -458,7 +458,7 @@
             ],
             "metadata": {
                 "description": "If 'Yes' is selected the Deploy Azure Monitor Baseline Alerts for Key Management policy initiative is assigned to the Landing Zones management group. This will ensure that relevant new resources created within that scope are configured with appropriate baseline alerts. If 'No', the initiative will not be assigned.",
-                "designArea": "Baseline alerts and monitoring"
+                "designArea": "Management"
             }
         },
         "enableAMBALoadBalancing": {
@@ -470,7 +470,7 @@
             ],
             "metadata": {
                 "description": "If 'Yes' is selected the Deploy Azure Monitor Baseline Alerts for Load Balancing policy initiative is assigned to the Landing Zones management group. This will ensure that relevant new resources created within that scope are configured with appropriate baseline alerts. If 'No', the initiative will not be assigned.",
-                "designArea": "Baseline alerts and monitoring"
+                "designArea": "Management"
             }
         },
         "enableAMBANetworkChanges": {
@@ -482,7 +482,7 @@
             ],
             "metadata": {
                 "description": "If 'Yes' is selected the Deploy Azure Monitor Baseline Alerts for Changes in Network Routing and Security policy initiative is assigned to the Landing Zones management group. This will ensure that relevant new resources created within that scope are configured with appropriate baseline alerts. If 'No', the initiative will not be assigned.",
-                "designArea": "Baseline alerts and monitoring"
+                "designArea": "Management"
             }
         },
         "enableAMBARecoveryServices": {
@@ -494,7 +494,7 @@
             ],
             "metadata": {
                 "description": "If 'Yes' is selected the Deploy Azure Monitor Baseline Alerts for Recovery Services policy initiative is assigned to the Landing Zones management group. This will ensure that relevant new resources created within that scope are configured with appropriate baseline alerts. If 'No', the initiative will not be assigned.",
-                "designArea": "Baseline alerts and monitoring"
+                "designArea": "Management"
             }
         },
         "enableAMBAStorage": {
@@ -506,7 +506,7 @@
             ],
             "metadata": {
                 "description": "If 'Yes' is selected the Deploy Azure Monitor Baseline Alerts for Storage policy initiative is assigned to the Landing Zones management group. This will ensure that relevant new resources created within that scope are configured with appropriate baseline alerts. If 'No', the initiative will not be assigned.",
-                "designArea": "Baseline alerts and monitoring"
+                "designArea": "Management"
             }
         },
         "enableAMBAVM": {
@@ -518,7 +518,7 @@
             ],
             "metadata": {
                 "description": "If 'Yes' is selected the Deploy Azure Monitor Baseline Alerts for Virtual Machines policy initiative is assigned to the Landing Zones management group. This will ensure that relevant new resources created within that scope are configured with appropriate baseline alerts. If 'No', the initiative will not be assigned.",
-                "designArea": "Baseline alerts and monitoring"
+                "designArea": "Management"
             }
         },
         "enableAMBAWeb": {
@@ -530,7 +530,7 @@
             ],
             "metadata": {
                 "description": "If 'Yes' is selected the Deploy Azure Monitor Baseline Alerts for Web policy initiative is assigned to the Landing Zones management group. This will ensure that relevant new resources created within that scope are configured with appropriate baseline alerts. If 'No', the initiative will not be assigned.",
-                "designArea": "Baseline alerts and monitoring"
+                "designArea": "Management"
             }
         },
         "connectivitySubscriptionId": {
@@ -539,7 +539,7 @@
             "maxLength": 36,
             "metadata": {
                 "description": "Provide the subscription id of an existing, empty subscription you want to dedicate for networking.",
-                "designArea": "Networking"
+                "designArea": "Network topology and connectivity"
             }
         },
         "addressPrefix": {
@@ -547,7 +547,7 @@
             "defaultValue": "",
             "metadata": {
                 "description": "Provide address prefix in CIDR notation (e.g 10.100.0.0/16)",
-                "designArea": "Networking"
+                "designArea": "Network topology and connectivity"
             }
         },
         "connectivityLocation": {
@@ -555,7 +555,7 @@
             "defaultValue": "[deployment().location]",
             "metadata": {
                 "description": "Select the target region for your connectivity deployment (requires you to provide a subscriptionId for connectivity)",
-                "designArea": "Networking"
+                "designArea": "Network topology and connectivity"
             }
         },
         "enableDdoS": {
@@ -568,7 +568,7 @@
             ],
             "metadata": {
                 "description": "If 'Yes' is selected when also adding a connectivity subscription, DDoS Network Protection will be enabled on the connectivity virtual network. Please note that DDoS Network Protection does incur additional costs that need to be considered",
-                "designArea": "Networking"
+                "designArea": "Network topology and connectivity"
             }
         },
         "enablePrivateDnsZones": {
@@ -580,7 +580,7 @@
             ],
             "metadata": {
                 "description": "If 'Yes' is selected when also adding a subscription for connectivity, ARM will create Private DNS Zones for Azure PaaS services selected",
-                "designArea": "Networking"
+                "designArea": "Network topology and connectivity"
             }
         },
         "privateDnsZonesToDeploy": {
@@ -588,7 +588,7 @@
             "defaultValue": [],
             "metadata": {
                 "description": "Select each Private DNS Zone to create which will offer DNS integration with Azure PaaS services where you enable private endpoints",
-                "designArea": "Networking"
+                "designArea": "Network topology and connectivity"
             }
         },
         "enableVpnGw": {
@@ -600,7 +600,7 @@
             ],
             "metadata": {
                 "description": "If 'Yes' is selected when also adding a subscription for connectivity, ARM will deploy VPN gateway",
-                "designArea": "Networking"
+                "designArea": "Network topology and connectivity"
             }
         },
         "enableVpnActiveActive": {
@@ -612,7 +612,7 @@
             ],
             "metadata": {
                 "description": "Deploy the VPN gateway in Active/Active mode",
-                "designArea": "Networking"
+                "designArea": "Network topology and connectivity"
             }
         },
         "gwRegionalOrAz": {
@@ -620,7 +620,7 @@
             "defaultValue": "",
             "metadata": {
                 "description": "If 'Yes' is selected Virtual Gateway will be deployed to the selected region and availability zones",
-                "designArea": "Networking"
+                "designArea": "Network topology and connectivity"
             }
         },
         "gwRegionalSku": {
@@ -628,7 +628,7 @@
             "defaultValue": "",
             "metadata": {
                 "description": "Select the required SKU for the VPN gateway",
-                "designArea": "Networking"
+                "designArea": "Network topology and connectivity"
             }
         },
         "gwAzSku": {
@@ -636,7 +636,7 @@
             "defaultValue": "",
             "metadata": {
                 "description": "Select the required SKU for the VPN gateway where Availability Zones are selected",
-                "designArea": "Networking"
+                "designArea": "Network topology and connectivity"
             }
         },
         "vpnGateWayScaleUnit": {
@@ -644,7 +644,7 @@
             "defaultValue": "1",
             "metadata": {
                 "description": "Select the Virtual WAN VPN Gateway scale unit",
-                "designArea": "Networking"
+                "designArea": "Network topology and connectivity"
             }
         },
         "subnetMaskForGw": {
@@ -779,7 +779,11 @@
         },
         "subnetMaskForAzFwMgmt": {
             "type": "string",
-            "defaultValue": ""
+            "defaultValue": "",
+                "metadata": {
+                "description": "Deploy Management Subnet for Azure Firewall",
+                "designArea": "Network topology and connectivity"
+            }
         },
         "enablevWANRoutingIntent": {
             "type": "string",
@@ -1116,7 +1120,7 @@
             "maxLength": 36,
             "metadata": {
                 "description": "Provide the subscription id of an existing, empty subscription you want to dedicate for identity.",
-                "designArea": "Azure billing offers and Microsoft Entra ID tenants"
+                "designArea": "Azure billing and Microsoft Entra tenant"
             }
         },
         "denyMgmtPortsForIdentity": {
@@ -1198,7 +1202,7 @@
             "defaultValue": [],
             "metadata": {
                 "description": "Provide the subscription ids for existing, empty subscriptions you want to move in as your first corp landing zones and connect to virtual networking hub.",
-                "designArea": "Azure billing offers and Microsoft Entra ID tenants"
+                "designArea": "Azure billing and Microsoft Entra tenant"
             }
         },
         "corpLzSubscriptionId": {
@@ -1206,7 +1210,7 @@
             "defaultValue": [],
             "metadata": {
                 "description": "Provide the subscription ids for existing, empty subscriptions you want to move in as your first corp landing zones.",
-                "designArea": "Azure billing offers and Microsoft Entra ID tenants"
+                "designArea": "Azure billing and Microsoft Entra tenant"
             }
         },
         "onlineLzSubscriptionId": {
@@ -1214,7 +1218,7 @@
             "defaultValue": [],
             "metadata": {
                 "description": "Provide the subscription ids for existing, empty subscriptions you want to move in as your first online landing zones.",
-                "designArea": "Azure billing offers and Microsoft Entra ID tenants"
+                "designArea": "Azure billing and Microsoft Entra tenant"
             }
         },
         "enableLzDdoS": {
@@ -1227,7 +1231,7 @@
             ],
             "metadata": {
                 "description": "If 'Yes' (default) is selected the 'Virtual networks should be protected by Azure DDoS Protection' policy is assigned to the Landing Zone management group. This will ensure that virtual networks have Azure DDoS Protection enabled to help safeguard against volumetric and protocol attacks. If 'Audit', the policy will not be enforced, only compliance will be audited. If 'No', the policy will not be assigned.",
-                "designArea": "Governance",
+                "designArea": "Security",
                 "designRecommendation": "Enabling Azure DDoS Protection is highly recommended regardless of the size, type, or location of your organization. This will help guard against volumetric and protocol attacks."
             }
         },
@@ -1296,7 +1300,7 @@
             ],
             "metadata": {
                 "description": "If 'Yes' (default) is selected the 'Enable Azure Monitor for VMs with Azure Monitoring Agent(AMA)' policy is assigned to the Landing Zone management group. This policy enables Azure Monitor for virtual machines with AMA. If 'Audit', the policy will not be enforced, only compliance will be audited. If 'No', the policy will not be assigned.",
-                "designArea": "Governance",
+                "designArea": "Management",
                 "designRecommendation": ""
             }
         },
@@ -1310,7 +1314,7 @@
             ],
             "metadata": {
                 "description": "If 'Yes' (default) is selected the 'Enable Azure Monitor for VMSS with Azure Monitoring Agent(AMA)' policy is assigned to the Landing Zone management group. This policy enables Azure Monitor for virtual machines scale sets with AMA. If 'Audit', the policy will not be enforced, only compliance will be audited. If 'No', the policy will not be assigned.",
-                "designArea": "Governance",
+                "designArea": "Management",
                 "designRecommendation": ""
             }
         },
@@ -1324,7 +1328,7 @@
             ],
             "metadata": {
                 "description": "If 'Yes' (default) is selected the 'Enable Azure Monitor for Hybrid VMs with AMA' policy is assigned to the Landing Zone management group. This policy enables Azure Monitor for hybrid virtual machines with AMA. If 'Audit', the policy will not be enforced, only compliance will be audited. If 'No', the policy will not be assigned.",
-                "designArea": "Governance",
+                "designArea": "Management",
                 "designRecommendation": ""
             }
         },
@@ -1408,7 +1412,7 @@
             ],
             "metadata": {
                 "description": "If 'Yes' (default) is selected the 'Configure backup on virtual machines without a given tag to a new recovery services vault with a default policy' policy is assigned to the Landing Zone management group. This policy enforces backup for all virtual machines. If 'Audit', the policy will not be enforced, only compliance will be audited. If 'No', the policy will not be assigned.",
-                "designArea": "Governance",
+                "designArea": "Management",
                 "designRecommendation": ""
             }
         },
@@ -1478,7 +1482,7 @@
             ],
             "metadata": {
                 "description": "If 'Yes' (default) is selected the 'Configure Azure Defender to be enabled on SQL servers' policy is assigned to the Landing Zone management group. This will ensure that Azure Defender is enabled on your Azure SQL Servers. If 'Audit', the policy will not be enforced, only compliance will be audited. If 'No', the policy will not be assigned.",
-                "designArea": "Governance",
+                "designArea": "Security",
                 "designRecommendation": "It is recommended to enable Azure Defender on your Azure SQL Servers to help detect anomalous activities that may indicate unusual and potentially harmful attempts to access or exploit databases."
             }
         },
@@ -1532,7 +1536,7 @@
             ],
             "metadata": {
                 "description": "If 'Yes' (default) is selected the Secure transfer to storage accounts should be enabled policy is assigned to the Landing Zone management group. Audit requirement of Secure transfer in your storage account. Secure transfer is an option that forces your storage account to accept requests only from secure connections (HTTPS). Use of HTTPS ensures authentication between the server and the service and protects data in transit from network layer attacks such as man-in-the-middle, eavesdropping, and session-hijacking. If 'Audit', the policy will not be enforced, only compliance will be audited. If 'No', the policy will not be assigned.",
-                "designArea": "Security",
+                "designArea": "Governance",
                 "designRecommendation": ""
             }
         },
@@ -1546,7 +1550,7 @@
             ],
             "metadata": {
                 "description": "If 'Yes' (default) is selected the Enforce recommended guardrails for Azure Key Vault initiative is assigned to the Landing Zone management group. Key Vault plays a crucial role in securing cloud services managing keys, certificates and secrets. This initiative enforces best practices and recommendations for Key Vault improving security and protection of the service. If 'Audit', the policy will not be enforced, only compliance will be audited. If 'No', the initiative will not be assigned.",
-                "designArea": "Security",
+                "designArea": "Governance",
                 "designRecommendation": ""
             }
         },
@@ -1560,7 +1564,7 @@
             ],
             "metadata": {
                 "description": "If 'Yes' (default) is selected the Enforce enhanced recovery and backup policies initiative is assigned to the Landing Zone management group. This is an audit only initiative that reviews if immutability, multi-user authentication and soft-delete features are enabled on Backup and Recovery Services vaults, which help protect from accidental delete or malicious compromise of data. If 'Audit', the policy will not be enforced, only compliance will be audited. If 'No', the initiative will not be assigned.",
-                "designArea": "Security",
+                "designArea": "Governance",
                 "designRecommendation": ""
             }
         },
@@ -1574,7 +1578,7 @@
             ],
             "metadata": {
                 "description": "If 'Yes' (default) is selected the Enforce recommended guardrails for Azure Key Vault initiative is assigned to the Platform management group. Key Vault plays a crucial role in securing cloud services managing keys, certificates and secrets. This initiative enforces best practices and recommendations for Key Vault improving security and protection of the service. If 'Audit', the policy will not be enforced, only compliance will be audited. If 'No', the initiative will not be assigned.",
-                "designArea": "Security",
+                "designArea": "Governance",
                 "designRecommendation": ""
             }
         },
@@ -1588,7 +1592,7 @@
             ],
             "metadata": {
                 "description": "If 'Yes' (default) is selected the Enforce enhanced recovery and backup policies initiative is assigned to the Platform management group. This is an audit only initiative that reviews if immutability, multi-user authentication and soft-delete features are enabled on Backup and Recovery Services vaults, which help protect from accidental delete or malicious compromise of data. If 'Audit', the policy will not be enforced, only compliance will be audited. If 'No', the initiative will not be assigned.",
-                "designArea": "Security",
+                "designArea": "Governance",
                 "designRecommendation": ""
             }
         },
@@ -1602,7 +1606,7 @@
             ],
             "metadata": {
                 "description": "If 'Yes' (default) is selected the Not allowed resource types policy is assigned to the Corp management group. This will prevent the provisioning of VPN and Express Route Gateways in the Corp landing zone, compromising the security of workloads that should use the Connectivity hub for on-premises access. If 'Audit', the policy will not be enforced, only compliance will be audited. If 'No', the policy will not be assigned.",
-                "designArea": "Networking",
+                "designArea": "Governance",
                 "designRecommendation": ""
             }
         },
@@ -1616,7 +1620,7 @@
             ],
             "metadata": {
                 "description": "If 'Yes' (default) is selected the Audit or Deny the creation of Private Link Private DNS Zones policy is assigned to the Corp management group. For ALZ this will Audit subscriptions in the Corp management group for Private DNS Zones that should only exist in the Connectivity hub. If 'Audit', the policy will not be enforced, only compliance will be audited. If 'No', the policy will not be assigned.",
-                "designArea": "Networking",
+                "designArea": "Governance",
                 "designRecommendation": ""
             }
         },
@@ -1630,7 +1634,7 @@
             ],
             "metadata": {
                 "description": "If 'Yes' (default) is selected the Web Application Firewall (WAF) should be enabled for Application Gateway policy is assigned to the Landing Zone management group. Deploy Azure Web Application Firewall (WAF) in front of public facing web applications for additional inspection of incoming traffic. Web Application Firewall (WAF) provides centralized protection of your web applications from common exploits and vulnerabilities such as SQL injections, Cross-Site Scripting, local and remote file executions. You can also restrict access to your web applications by countries, IP address ranges, and other http(s) parameters via custom rules. If 'Audit', the policy will not be enforced, only compliance will be audited. If 'No', the policy will not be assigned.",
-                "designArea": "Networking",
+                "designArea": "Governance",
                 "designRecommendation": ""
             }
         },
@@ -1644,7 +1648,7 @@
             ],
             "metadata": {
                 "description": "If 'Yes' (default) is selected the Enforce Azure Compute Security Benchmark compliance auditing initiative is assigned to the Intermediate Root management group. Audits the compliance of Windows and Linux virtual machines against the Azure Compute Security Benchmark. If 'Audit', the policy will not be enforced, only compliance will be audited. If 'No', the initiative will not be assigned.",
-                "designArea": "Security",
+                "designArea": "Governance",
                 "designRecommendation": ""
             }
         },
@@ -1673,7 +1677,7 @@
             "defaultValue": "No",
             "metadata": {
                 "description": "If 'Yes' (default) is selected the Deny or Audit resources without Encryption with a customer-managed key (CMK) initiative is assigned to the selected management group(s) - determined by parameter wsCMKSelectorMG. Denies the provisioning of resources that do not have customer managed keys enabled. If 'No', the initiative will not be assigned.",
-                "designArea": "Workload Specific Compliance",
+                "designArea": "Governance",
                 "designRecommendation": "Highly regulated industries may require the use of customer-managed keys to encrypt data at rest. This initiative ensures that resources are encrypted with customer-managed keys."
             }
         },
@@ -1693,7 +1697,7 @@
             "defaultValue": "No",
             "metadata": {
                 "description": "If 'Yes' (default) is selected the Enforce recommended guardrails for API Management initiative is assigned to the selected management group(s) - determined by parameter wsAPIMSelectorMG. Enforces best practice principals for API Management resources. If 'No', the initiative will not be assigned.",
-                "designArea": "Workload Specific Compliance",
+                "designArea": "Governance",
                 "designRecommendation": "API Management is a critical component for managing APIs and services. This initiative ensures that API Management resources are configured with best practices."
             }
         },
@@ -1713,7 +1717,7 @@
             "defaultValue": "No",
             "metadata": {
                 "description": "If 'Yes' (default) is selected the Enforce recommended guardrails for App Services initiative is assigned to the selected management group(s) - determined by parameter wsAppServicesSelectorMG. Enforces best practice principals for App Services resources. If 'No', the initiative will not be assigned.",
-                "designArea": "Workload Specific Compliance",
+                "designArea": "Governance",
                 "designRecommendation": "App Services is a critical component for hosting web applications and other services that rely on App Services (e.g. Functions). This initiative ensures that App Services resources are configured with best practices."
             }
         },
@@ -1733,7 +1737,7 @@
             "defaultValue": "No",
             "metadata": {
                 "description": "If 'Yes' (default) is selected the Enforce recommended guardrails for Automation Accounts initiative is assigned to the selected management group(s) - determined by parameter wsAutomationSelectorMG. Enforces best practice principals for Automation Accounts resources. If 'No', the initiative will not be assigned.",
-                "designArea": "Workload Specific Compliance",
+                "designArea": "Governance",
                 "designRecommendation": ""
             }
         },
@@ -1753,7 +1757,7 @@
             "defaultValue": "No",
             "metadata": {
                 "description": "If 'Yes' (default) is selected the Enforce recommended guardrails for AI Bot Service initiative is assigned to the selected management group(s) - determined by parameter wsBotServiceSelectorMG. Enforces best practice principals for AI Bot Service resources. If 'No', the initiative will not be assigned.",
-                "designArea": "Workload Specific Compliance",
+                "designArea": "Governance",
                 "designRecommendation": ""
             }
         },
@@ -1773,7 +1777,7 @@
             "defaultValue": "No",
             "metadata": {
                 "description": "If 'Yes' (default) is selected the Enforce recommended guardrails for AI Search initiative is assigned to the selected management group(s) - determined by parameter wsCognitiveServicesSelectorMG. Enforces best practice principals for AI Search resources. If 'No', the initiative will not be assigned.",
-                "designArea": "Workload Specific Compliance",
+                "designArea": "Governance",
                 "designRecommendation": ""
             }
         },
@@ -1793,7 +1797,7 @@
             "defaultValue": "No",
             "metadata": {
                 "description": "If 'Yes' (default) is selected the Enforce recommended guardrails for Compute initiative is assigned to the selected management group(s) - determined by parameter wsComputeSelectorMG. Enforces best practice principals for Compute resources. If 'No', the initiative will not be assigned.",
-                "designArea": "Workload Specific Compliance",
+                "designArea": "Governance",
                 "designRecommendation": ""
             }
         },
@@ -1813,7 +1817,7 @@
             "defaultValue": "No",
             "metadata": {
                 "description": "If 'Yes' (default) is selected the Enforce recommended guardrails for Container Apps initiative is assigned to the selected management group(s) - determined by parameter wsContainerAppsSelectorMG. Enforces best practice principals for Container Apps resources. If 'No', the initiative will not be assigned.",
-                "designArea": "Workload Specific Compliance",
+                "designArea": "Governance",
                 "designRecommendation": ""
             }
         },
@@ -1833,7 +1837,7 @@
             "defaultValue": "No",
             "metadata": {
                 "description": "If 'Yes' (default) is selected the Enforce recommended guardrails for Container Instance initiative is assigned to the selected management group(s) - determined by parameter wsContainerInstanceSelectorMG. Enforces best practice principals for Container Instance resources. If 'No', the initiative will not be assigned.",
-                "designArea": "Workload Specific Compliance",
+                "designArea": "Governance",
                 "designRecommendation": ""
             }
         },
@@ -1853,7 +1857,7 @@
             "defaultValue": "No",
             "metadata": {
                 "description": "If 'Yes' (default) is selected the Enforce recommended guardrails for Container Registry initiative is assigned to the selected management group(s) - determined by parameter wsContainerRegistrySelectorMG. Enforces best practice principals for Container Registry resources. If 'No', the initiative will not be assigned.",
-                "designArea": "Workload Specific Compliance",
+                "designArea": "Governance",
                 "designRecommendation": ""
             }
         },
@@ -1873,7 +1877,7 @@
             "defaultValue": "No",
             "metadata": {
                 "description": "If 'Yes' (default) is selected the Enforce recommended guardrails for Cosmos DB initiative is assigned to the selected management group(s) - determined by parameter wsCosmosDbSelectorMG. Enforces best practice principals for Cosmos DB resources. If 'No', the initiative will not be assigned.",
-                "designArea": "Workload Specific Compliance",
+                "designArea": "Governance",
                 "designRecommendation": ""
             }
         },
@@ -1893,7 +1897,7 @@
             "defaultValue": "No",
             "metadata": {
                 "description": "If 'Yes' (default) is selected the Enforce recommended guardrails for Data Explorer initiative is assigned to the selected management group(s) - determined by parameter wsDataExplorerSelectorMG. Enforces best practice principals for Data Explorer resources. If 'No', the initiative will not be assigned.",
-                "designArea": "Workload Specific Compliance",
+                "designArea": "Governance",
                 "designRecommendation": ""
             }
         },
@@ -1913,7 +1917,7 @@
             "defaultValue": "No",
             "metadata": {
                 "description": "If 'Yes' (default) is selected the Enforce recommended guardrails for Data Factory initiative is assigned to the selected management group(s) - determined by parameter wsDataFactorySelectorMG. Enforces best practice principals for Data Factory resources. If 'No', the initiative will not be assigned.",
-                "designArea": "Workload Specific Compliance",
+                "designArea": "Governance",
                 "designRecommendation": ""
             }
         },
@@ -1933,7 +1937,7 @@
             "defaultValue": "No",
             "metadata": {
                 "description": "If 'Yes' (default) is selected the Enforce recommended guardrails for Event Grid initiative is assigned to the selected management group(s) - determined by parameter wsEventGridSelectorMG. Enforces best practice principals for Event Grid resources. If 'No', the initiative will not be assigned.",
-                "designArea": "Workload Specific Compliance",
+                "designArea": "Governance",
                 "designRecommendation": ""
             }
         },
@@ -1953,7 +1957,7 @@
             "defaultValue": "No",
             "metadata": {
                 "description": "If 'Yes' (default) is selected the Enforce recommended guardrails for Event Hub initiative is assigned to the selected management group(s) - determined by parameter wsEventHubSelectorMG. Enforces best practice principals for Event Hub resources. If 'No', the initiative will not be assigned.",
-                "designArea": "Workload Specific Compliance",
+                "designArea": "Governance",
                 "designRecommendation": ""
             }
         },
@@ -1973,7 +1977,7 @@
             "defaultValue": "No",
             "metadata": {
                 "description": "If 'Yes' (default) is selected the Enforce recommended guardrails for Key Vault - Supplementary initiative is assigned to the selected management group(s) - determined by parameter wsKeyVaultSupSelectorMG. Enforces additional best practice principals for Key Vault resources, typically required by highly regulated industries. If 'No', the initiative will not be assigned.",
-                "designArea": "Workload Specific Compliance",
+                "designArea": "Governance",
                 "designRecommendation": ""
             }
         },
@@ -1993,7 +1997,7 @@
             "defaultValue": "No",
             "metadata": {
                 "description": "If 'Yes' (default) is selected the Enforce recommended guardrails for Kubernetes initiative is assigned to the selected management group(s) - determined by parameter wsKubernetesSelectorMG. Enforces best practice principals for Kubernetes resources. If 'No', the initiative will not be assigned.",
-                "designArea": "Workload Specific Compliance",
+                "designArea": "Governance",
                 "designRecommendation": ""
             }
         },
@@ -2013,7 +2017,7 @@
             "defaultValue": "No",
             "metadata": {
                 "description": "If 'Yes' (default) is selected the Enforce recommended guardrails for Machine Learning initiative is assigned to the selected management group(s) - determined by parameter wsMachineLearningSelectorMG. Enforces best practice principals for Machine Learning resources. If 'No', the initiative will not be assigned.",
-                "designArea": "Workload Specific Compliance",
+                "designArea": "Governance",
                 "designRecommendation": ""
             }
         },
@@ -2033,7 +2037,7 @@
             "defaultValue": "No",
             "metadata": {
                 "description": "If 'Yes' (default) is selected the Enforce recommended guardrails for MySQL initiative is assigned to the selected management group(s) - determined by parameter wsMySQLSelectorMG. Enforces best practice principals for Azure Database for MySQL resources. If 'No', the initiative will not be assigned.",
-                "designArea": "Workload Specific Compliance",
+                "designArea": "Governance",
                 "designRecommendation": ""
             }
         },
@@ -2053,7 +2057,7 @@
             "defaultValue": "No",
             "metadata": {
                 "description": "If 'Yes' (default) is selected the Enforce recommended guardrails for Network and Networking services initiative is assigned to the selected management group(s) - determined by parameter wsNetworkSelectorMG. Enforces additional best practice principals for Network and Networking services resources typically required for highly regulated industries. If 'No', the initiative will not be assigned.",
-                "designArea": "Workload Specific Compliance",
+                "designArea": "Governance",
                 "designRecommendation": ""
             }
         },
@@ -2073,7 +2077,7 @@
             "defaultValue": "No",
             "metadata": {
                 "description": "If 'Yes' (default) is selected the Enforce recommended guardrails for OpenAI initiative is assigned to the selected management group(s) - determined by parameter wsOpenAISelectorMG. Enforces best practice principals for Azure OpenAI resources. If 'No', the initiative will not be assigned.",
-                "designArea": "Workload Specific Compliance",
+                "designArea": "Governance",
                 "designRecommendation": ""
             }
         },
@@ -2093,7 +2097,7 @@
             "defaultValue": "No",
             "metadata": {
                 "description": "If 'Yes' (default) is selected the Enforce recommended guardrails for PostgreSQL initiative is assigned to the selected management group(s) - determined by parameter wsPostgreSQLSelectorMG. Enforces best practice principals for Azure Database for PostgreSQL resources. If 'No', the initiative will not be assigned.",
-                "designArea": "Workload Specific Compliance",
+                "designArea": "Governance",
                 "designRecommendation": ""
             }
         },
@@ -2113,7 +2117,7 @@
             "defaultValue": "No",
             "metadata": {
                 "description": "If 'Yes' (default) is selected the Enforce recommended guardrails for Service Bus initiative is assigned to the selected management group(s) - determined by parameter wsServiceBusSelectorMG. Enforces best practice principals for Service Bus resources. If 'No', the initiative will not be assigned.",
-                "designArea": "Workload Specific Compliance",
+                "designArea": "Governance",
                 "designRecommendation": ""
             }
         },
@@ -2133,7 +2137,7 @@
             "defaultValue": "No",
             "metadata": {
                 "description": "If 'Yes' (default) is selected the Enforce recommended guardrails for SQL initiative is assigned to the selected management group(s) - determined by parameter wsSQLSelectorMG. Enforces best practice principals for Azure SQL resources. If 'No', the initiative will not be assigned.",
-                "designArea": "Workload Specific Compliance",
+                "designArea": "Governance",
                 "designRecommendation": ""
             }
         },
@@ -2153,7 +2157,7 @@
             "defaultValue": "No",
             "metadata": {
                 "description": "If 'Yes' (default) is selected the Enforce recommended guardrails for Storage initiative is assigned to the selected management group(s) - determined by parameter wsStorageSelectorMG. Enforces best practice principals for Storage resources. If 'No', the initiative will not be assigned.",
-                "designArea": "Workload Specific Compliance",
+                "designArea": "Governance",
                 "designRecommendation": ""
             }
         },
@@ -2173,7 +2177,7 @@
             "defaultValue": "No",
             "metadata": {
                 "description": "If 'Yes' (default) is selected the Enforce recommended guardrails for Synapse initiative is assigned to the selected management group(s) - determined by parameter wsSynapseSelectorMG. Enforces best practice principals for Synapse resources. If 'No', the initiative will not be assigned.",
-                "designArea": "Workload Specific Compliance",
+                "designArea": "Governance",
                 "designRecommendation": ""
             }
         },
@@ -2193,7 +2197,7 @@
             "defaultValue": "No",
             "metadata": {
                 "description": "If 'Yes' (default) is selected the Enforce recommended guardrails for Virtual Desktop initiative is assigned to the selected management group(s) - determined by parameter wsVirtualDesktopSelectorMG. Enforces best practice principals for Azure Virtual Desktop resources. If 'No', the initiative will not be assigned.",
-                "designArea": "Workload Specific Compliance",
+                "designArea": "Governance",
                 "designRecommendation": ""
             }
         },
@@ -2215,203 +2219,232 @@
             "type": "string",
             "defaultValue": "",
             "metadata": {
-                "description": "Australian Government ISM PROTECTED - Required Policy Initative Parameters: List of users that must be excluded in Windows VM Administrators group. A semicolon-separated list of users that should be excluded in the Administrators local group; Ex: Administrator; myUser1; myUser2"
+                "description": "Australian Government ISM PROTECTED - Required Policy Initative Parameters: List of users that must be excluded in Windows VM Administrators group. A semicolon-separated list of users that should be excluded in the Administrators local group; Ex: Administrator; myUser1; myUser2",
+                "designArea": "Governance"
             }
         },
         "regCompPolParAusGovIsmRestrictedResourceTypes": {
             "type": "string",
             "defaultValue": "all",
             "metadata": {
-                "description": "Australian Government ISM PROTECTED - Required Policy Initative Parameters: List of resource types that should have diagnostic logging enabled. If 'all' (default) is selected, all resource types will have diagnostic logging enabled. If 'none' is selected, no resource types will have diagnostic logging enabled."
+                "description": "Australian Government ISM PROTECTED - Required Policy Initative Parameters: List of resource types that should have diagnostic logging enabled. If 'all' (default) is selected, all resource types will have diagnostic logging enabled. If 'none' is selected, no resource types will have diagnostic logging enabled.",
+                "designArea": "Governance"
             }
         },
         "regCompPolParMPAACertificateThumb": {
             "type": "string",
             "defaultValue": "",
             "metadata": {
-                "description": "Motion Picture Association of America (MPAA) - Required Policy Initative Parameters: Certificate thumbprints that should exist under the Trusted Root. A semicolon-separated list of certificate thumbprints that should exist under the Trusted Root certificate store (Cert:\\LocalMachine\\Root). e.g. THUMBPRINT1;THUMBPRINT2;THUMBPRINT3"
+                "description": "Motion Picture Association of America (MPAA) - Required Policy Initative Parameters: Certificate thumbprints that should exist under the Trusted Root. A semicolon-separated list of certificate thumbprints that should exist under the Trusted Root certificate store (Cert:\\LocalMachine\\Root). e.g. THUMBPRINT1;THUMBPRINT2;THUMBPRINT3",
+                "designArea": "Governance"
             }
         },
         "regCompPolParMPAAApplicationName": {
             "type": "string",
             "defaultValue": "",
             "metadata": {
-                "description": "Motion Picture Association of America (MPAA) - Required Policy Initative Parameters: Application names to be installed on VMs. A semicolon-separated list of the names of the applications that should be installed. e.g. 'python; powershell; Microsoft SQL Server 2014 (64-bit); Microsoft Visual Studio Code' or 'Microsoft SQL Server 2014*' (to match any application starting with 'Microsoft SQL Server 2014')'"
+                "description": "Motion Picture Association of America (MPAA) - Required Policy Initative Parameters: Application names to be installed on VMs. A semicolon-separated list of the names of the applications that should be installed. e.g. 'python; powershell; Microsoft SQL Server 2014 (64-bit); Microsoft Visual Studio Code' or 'Microsoft SQL Server 2014*' (to match any application starting with 'Microsoft SQL Server 2014')'",
+                "designArea": "Governance"
             }
         },
         "regCompPolParMPAAStoragePrefix": {
             "type": "string",
             "defaultValue": "",
             "metadata": {
-                "description": "Motion Picture Association of America (MPAA) - Required Policy Initative Parameters: Storage Account Prefix for Regional Storage Account to deploy diagnostic settings for Network Security Groups. This prefix will be combined with the network security group location to form the created storage account name."
+                "description": "Motion Picture Association of America (MPAA) - Required Policy Initative Parameters: Storage Account Prefix for Regional Storage Account to deploy diagnostic settings for Network Security Groups. This prefix will be combined with the network security group location to form the created storage account name.",
+                "designArea": "Governance"
             }
         },
         "regCompPolParMPAAResGroupPrefix": {
             "type": "string",
             "defaultValue": "",
             "metadata": {
-                "description": "Motion Picture Association of America (MPAA) - Required Policy Initative Parameters: Resource Group Name for Storage Account to deploy diagnostic settings for Network Security Groups. The resource group that the storage account will be created in."
+                "description": "Motion Picture Association of America (MPAA) - Required Policy Initative Parameters: Resource Group Name for Storage Account to deploy diagnostic settings for Network Security Groups. The resource group that the storage account will be created in.",
+                "designArea": "Governance"
             }
         },
         "regCompPolParMPAARBatchMetricName": {
             "type": "string",
             "defaultValue": "",
             "metadata": {
-                "description": "Motion Picture Association of America (MPAA) - Required Policy Initative Parameters: Metric name on which alert rules should be configured in Batch accounts. The metric name that an alert rule must be enabled on."
+                "description": "Motion Picture Association of America (MPAA) - Required Policy Initative Parameters: Metric name on which alert rules should be configured in Batch accounts. The metric name that an alert rule must be enabled on.",
+                "designArea": "Governance"
             }
         },
         "regCompPolParSovBaseConfRegions": {
             "type": "array",
             "defaultValue": [],
             "metadata": {
-                "description": "Sovereignty Baseline - Confidential Policies - Required Policy Initative Parameters: The list of Azure Regions that are approved for usage. Any non-global resources attempted to be deployed outsize of this region will be restricted."
+                "description": "Sovereignty Baseline - Confidential Policies - Required Policy Initative Parameters: The list of Azure Regions that are approved for usage. Any non-global resources attempted to be deployed outsize of this region will be restricted.",
+                "designArea": "Governance"
             }
         },
         "regCompPolParSovBaseGlobalRegions": {
             "type": "array",
             "defaultValue": [],
             "metadata": {
-                "description": "Sovereignty Baseline - Global Policies - Required Policy Initative Parameters: The list of Azure Regions that are approved for usage. Any non-global resources attempted to be deployed outsize of this region will be restricted."
+                "description": "Sovereignty Baseline - Global Policies - Required Policy Initative Parameters: The list of Azure Regions that are approved for usage. Any non-global resources attempted to be deployed outsize of this region will be restricted.",
+                "designArea": "Governance"
             }
         },
         "regCompPolParSwift2020VmAdminsInclude": {
             "type": "string",
             "defaultValue": "",
             "metadata": {
-                "description": "SWIFT CSP-CSCF v2020 - Required Policy Initative Parameters: List of users that must be included in Windows VM Administrators group. A semicolon-separated list of users that should be included in the Administrators local group; Ex: Administrator; myUser1; myUser2"
+                "description": "SWIFT CSP-CSCF v2020 - Required Policy Initative Parameters: List of users that must be included in Windows VM Administrators group. A semicolon-separated list of users that should be included in the Administrators local group; Ex: Administrator; myUser1; myUser2",
+                "designArea": "Governance"
             }
         },
         "regCompPolParSwift2020DomainFqdn": {
             "type": "string",
             "defaultValue": "",
             "metadata": {
-                "description": "SWIFT CSP-CSCF v2020 - Required Policy Initative Parameters: The fully qualified domain name (FQDN) that the Windows VMs should be joined to"
+                "description": "SWIFT CSP-CSCF v2020 - Required Policy Initative Parameters: The fully qualified domain name (FQDN) that the Windows VMs should be joined to",
+                "designArea": "Governance"
             }
         },
         "regCompPolParCanadaFedPbmmVmAdminsInclude": {
             "type": "string",
             "defaultValue": "",
             "metadata": {
-                "description": "Canada Federal PBMM - Required Policy Initative Parameters: List of users that must be included in Windows VM Administrators group. A semicolon-separated list of users that should be included in the Administrators local group; Ex: Administrator; myUser1; myUser2"
+                "description": "Canada Federal PBMM - Required Policy Initative Parameters: List of users that must be included in Windows VM Administrators group. A semicolon-separated list of users that should be included in the Administrators local group; Ex: Administrator; myUser1; myUser2",
+                "designArea": "Governance"
             }
         },
         "regCompPolParCanadaFedPbmmVmAdminsExclude": {
             "type": "string",
             "defaultValue": "",
             "metadata": {
-                "description": "Canada Federal PBMM - Required Policy Initative Parameters: List of users that must be excluded in Windows VM Administrators group. A semicolon-separated list of users that should be excluded in the Administrators local group; Ex: Administrator; myUser1; myUser2"
+                "description": "Canada Federal PBMM - Required Policy Initative Parameters: List of users that must be excluded in Windows VM Administrators group. A semicolon-separated list of users that should be excluded in the Administrators local group; Ex: Administrator; myUser1; myUser2",
+                "designArea": "Governance"
             }
         },
         "regCompPolParCisV2KeyVaultKeysRotateDays": {
             "type": "int",
             "defaultValue": 90,
             "metadata": {
-                "description": "CIS Microsoft Azure Foundations Benchmark v2.0.0 - Required Policy Initative Parameters: The maximum number of days before Keys in a Key Vault should be rotated. Keys should have a rotation policy ensuring that their rotation is scheduled within the specified number of days after creation."
+                "description": "CIS Microsoft Azure Foundations Benchmark v2.0.0 - Required Policy Initative Parameters: The maximum number of days before Keys in a Key Vault should be rotated. Keys should have a rotation policy ensuring that their rotation is scheduled within the specified number of days after creation.",
+                "designArea": "Governance"
             }
         },
         "regCompPolParCmmcL3VmAdminsInclude": {
             "type": "string",
             "defaultValue": "",
             "metadata": {
-                "description": "CMMC Level 3 - Required Policy Initative Parameters: List of users that must be included in Windows VM Administrators group. A semicolon-separated list of users that should be included in the Administrators local group; Ex: Administrator; myUser1; myUser2"
+                "description": "CMMC Level 3 - Required Policy Initative Parameters: List of users that must be included in Windows VM Administrators group. A semicolon-separated list of users that should be included in the Administrators local group; Ex: Administrator; myUser1; myUser2",
+                "designArea": "Governance"
             }
         },
         "regCompPolParCmmcL3VmAdminsExclude": {
             "type": "string",
             "defaultValue": "",
             "metadata": {
-                "description": "CMMC Level 3 - Required Policy Initative Parameters: List of users that must be excluded in Windows VM Administrators group. A semicolon-separated list of users that should be excluded in the Administrators local group; Ex: Administrator; myUser1; myUser2"
+                "description": "CMMC Level 3 - Required Policy Initative Parameters: List of users that must be excluded in Windows VM Administrators group. A semicolon-separated list of users that should be excluded in the Administrators local group; Ex: Administrator; myUser1; myUser2",
+                "designArea": "Governance"
             }
         },
         "regCompPolParHitrustHipaaApplicationName": {
             "type": "string",
             "defaultValue": "",
             "metadata": {
-                "description": "HITRUST/HIPAA - Required Policy Initative Parameters: Application names to be installed on VMs. A semicolon-separated list of the names of the applications that should be installed. e.g. 'python; powershell; Microsoft SQL Server 2014 (64-bit); Microsoft Visual Studio Code' or 'Microsoft SQL Server 2014*' (to match any application starting with 'Microsoft SQL Server 2014')'"
+                "description": "HITRUST/HIPAA - Required Policy Initative Parameters: Application names to be installed on VMs. A semicolon-separated list of the names of the applications that should be installed. e.g. 'python; powershell; Microsoft SQL Server 2014 (64-bit); Microsoft Visual Studio Code' or 'Microsoft SQL Server 2014*' (to match any application starting with 'Microsoft SQL Server 2014')'",
+                "designArea": "Governance"
             }
         },
         "regCompPolParHitrustHipaaStoragePrefix": {
             "type": "string",
             "defaultValue": "",
             "metadata": {
-                "description": "HITRUST/HIPAA - Required Policy Initative Parameters: Storage Account Prefix for Regional Storage Account to deploy diagnostic settings for Network Security Groups. This prefix will be combined with the network security group location to form the created storage account name."
+                "description": "HITRUST/HIPAA - Required Policy Initative Parameters: Storage Account Prefix for Regional Storage Account to deploy diagnostic settings for Network Security Groups. This prefix will be combined with the network security group location to form the created storage account name.",
+                "designArea": "Governance"
             }
         },
         "regCompPolParHitrustHipaaResGroupPrefix": {
             "type": "string",
             "defaultValue": "",
             "metadata": {
-                "description": "HITRUST/HIPAA - Required Policy Initative Parameters: Resource Group Name for Storage Account to deploy diagnostic settings for Network Security Groups. The resource group that the storage account will be created in."
+                "description": "HITRUST/HIPAA - Required Policy Initative Parameters: Resource Group Name for Storage Account to deploy diagnostic settings for Network Security Groups. The resource group that the storage account will be created in.",
+                "designArea": "Governance"
             }
         },
         "regCompPolParHitrustHipaaCertificateThumb": {
             "type": "string",
             "defaultValue": "",
             "metadata": {
-                "description": "HITRUST/HIPAA - Required Policy Initative Parameters: Certificate thumbprints that should exist under the Trusted Root. A semicolon-separated list of certificate thumbprints that should exist under the Trusted Root certificate store (Cert:\\LocalMachine\\Root). e.g. THUMBPRINT1;THUMBPRINT2;THUMBPRINT3"
+                "description": "HITRUST/HIPAA - Required Policy Initative Parameters: Certificate thumbprints that should exist under the Trusted Root. A semicolon-separated list of certificate thumbprints that should exist under the Trusted Root certificate store (Cert:\\LocalMachine\\Root). e.g. THUMBPRINT1;THUMBPRINT2;THUMBPRINT3",
+                "designArea": "Governance"
             }
         },
         "regCompPolParIrs1075Sep2016VmAdminsExclude": {
             "type": "string",
             "defaultValue": "",
             "metadata": {
-                "description": "IRS1075 September 2016 - Required Policy Initative Parameters: List of users that must be excluded in Windows VM Administrators group. A semicolon-separated list of users that should be excluded in the Administrators local group; Ex: Administrator; myUser1; myUser2"
+                "description": "IRS1075 September 2016 - Required Policy Initative Parameters: List of users that must be excluded in Windows VM Administrators group. A semicolon-separated list of users that should be excluded in the Administrators local group; Ex: Administrator; myUser1; myUser2",
+                "designArea": "Governance"
             }
         },
         "regCompPolParIrs1075Sep2016VmAdminsInclude": {
             "type": "string",
             "defaultValue": "",
             "metadata": {
-                "description": "IRS1075 September 2016 - Required Policy Initative Parameters: List of users that must be included in Windows VM Administrators group. A semicolon-separated list of users that should be included in the Administrators local group; Ex: Administrator; myUser1; myUser2"
+                "description": "IRS1075 September 2016 - Required Policy Initative Parameters: List of users that must be included in Windows VM Administrators group. A semicolon-separated list of users that should be included in the Administrators local group; Ex: Administrator; myUser1; myUser2",
+                "designArea": "Governance"
             }
         },
         "regCompPolParNZIsmRestrictedVmAdminsInclude": {
             "type": "string",
             "defaultValue": "",
             "metadata": {
-                "description": "New Zealand ISM Restricted - Required Policy Initative Parameters: List of users that must be included in Windows VM Administrators group. A semicolon-separated list of users that should be included in the Administrators local group; Ex: Administrator; myUser1; myUser2"
+                "description": "New Zealand ISM Restricted - Required Policy Initative Parameters: List of users that must be included in Windows VM Administrators group. A semicolon-separated list of users that should be included in the Administrators local group; Ex: Administrator; myUser1; myUser2",
+                "designArea": "Governance"
             }
         },
         "regCompPolParNZIsmRestrictedVmAdminsExclude": {
             "type": "string",
             "defaultValue": "",
             "metadata": {
-                "description": "New Zealand ISM Restricted - Required Policy Initative Parameters: List of users that must be excluded in Windows VM Administrators group. A semicolon-separated list of users that should be excluded in the Administrators local group; Ex: Administrator; myUser1; myUser2"
+                "description": "New Zealand ISM Restricted - Required Policy Initative Parameters: List of users that must be excluded in Windows VM Administrators group. A semicolon-separated list of users that should be excluded in the Administrators local group; Ex: Administrator; myUser1; myUser2",
+                "designArea": "Governance"
             }
         },
         "regCompPolParNistSp800171R2VmAdminsExclude": {
             "type": "string",
             "defaultValue": "",
             "metadata": {
-                "description": "NIST SP 800-171 Rev. 2 - Required Policy Initative Parameters: List of users that must be excluded in Windows VM Administrators group. A semicolon-separated list of users that should be excluded in the Administrators local group; Ex: Administrator; myUser1; myUser2"
+                "description": "NIST SP 800-171 Rev. 2 - Required Policy Initative Parameters: List of users that must be excluded in Windows VM Administrators group. A semicolon-separated list of users that should be excluded in the Administrators local group; Ex: Administrator; myUser1; myUser2",
+                "designArea": "Governance"
             }
         },
         "regCompPolParNistSp800171R2VmAdminsInclude": {
             "type": "string",
             "defaultValue": "",
             "metadata": {
-                "description": "NIST SP 800-171 Rev. 2 - Required Policy Initative Parameters: List of users that must be included in Windows VM Administrators group. A semicolon-separated list of users that should be included in the Administrators local group; Ex: Administrator; myUser1; myUser2"
+                "description": "NIST SP 800-171 Rev. 2 - Required Policy Initative Parameters: List of users that must be included in Windows VM Administrators group. A semicolon-separated list of users that should be included in the Administrators local group; Ex: Administrator; myUser1; myUser2",
+                "designArea": "Governance"
             }
         },
         "regCompPolParSoc2Type2AllowedRegistries": {
             "type": "string",
             "defaultValue": "^[^\\/]+\\.azurecr\\.io\\/.+$",
             "metadata": {
-                "description": "SOC 2 Type 2 - Required Policy Initative Parameters: AKS + Arc K8s - Allowed registry or registries regex. The RegEx rule used to match allowed container image field in a Kubernetes cluster. For example, to allow any Azure Container Registry image by matching partial path: ^[^\\/]+\\.azurecr\\.io\\/.+$ and for multiple registries: ^([^\\/]+\\.azurecr\\.io|registry\\.io)\\/.+$"
+                "description": "SOC 2 Type 2 - Required Policy Initative Parameters: AKS + Arc K8s - Allowed registry or registries regex. The RegEx rule used to match allowed container image field in a Kubernetes cluster. For example, to allow any Azure Container Registry image by matching partial path: ^[^\\/]+\\.azurecr\\.io\\/.+$ and for multiple registries: ^([^\\/]+\\.azurecr\\.io|registry\\.io)\\/.+$",
+                "designArea": "Governance"
             }
         },
         "regCompPolParSoc2Type2MaxCpuUnits": {
             "type": "string",
             "defaultValue": "200m",
             "metadata": {
-                "description": "SOC 2 Type 2 - Required Policy Initative Parameters: AKS + Arc K8s - Max allowed CPU units. The maximum CPU units allowed for a container. E.g. 200m. For more information, please refer <a href=\"https://aka.ms/k8s-policy-pod-limits\">https://aka.ms/k8s-policy-pod-limits</a>"
+                "description": "SOC 2 Type 2 - Required Policy Initative Parameters: AKS + Arc K8s - Max allowed CPU units. The maximum CPU units allowed for a container. E.g. 200m. For more information, please refer <a href=\"https://aka.ms/k8s-policy-pod-limits\">https://aka.ms/k8s-policy-pod-limits</a>",
+                "designArea": "Governance"
             }
         },
         "regCompPolParSoc2Type2MaxMemoryBytes": {
             "type": "string",
             "defaultValue": "1Gi",
             "metadata": {
-                "description": "SOC 2 Type 2 - Required Policy Initative Parameters: AKS + Arc K8s - Max allowed memory bytes. The maximum memory bytes allowed for a container. E.g. 1Gi. For more information, please refer <a href=\"https://aka.ms/k8s-policy-pod-limits\">https://aka.ms/k8s-policy-pod-limits</a>"
+                "description": "SOC 2 Type 2 - Required Policy Initative Parameters: AKS + Arc K8s - Max allowed memory bytes. The maximum memory bytes allowed for a container. E.g. 1Gi. For more information, please refer <a href=\"https://aka.ms/k8s-policy-pod-limits\">https://aka.ms/k8s-policy-pod-limits</a>",
+                "designArea": "Governance"
             }
         },
         "listOfResourceTypesDisallowedForDeletion": {
@@ -2420,7 +2453,8 @@
                 "microsoft.managedidentity/userassignedidentities"
             ],
             "metadata": {
-                "description": "Array of Azure resources to not allow deletion of. If a resource type is specified in this list, the policy will deny the deletion of the resource."
+                "description": "Array of Azure resources to not allow deletion of. If a resource type is specified in this list, the policy will deny the deletion of the resource.",
+                "designArea": "Governance"
             }
         }
     },
