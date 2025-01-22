@@ -56,7 +56,10 @@
                         },
                         {
                             "name": "resourceScope",
-                            "type": "Microsoft.Common.ResourceScope"
+                            "type": "Microsoft.Common.ResourceScope",
+                            "location": {
+                                "resourceTypes": []
+                            }
                         },
                         {
                             "name": "getSubscriptions",
